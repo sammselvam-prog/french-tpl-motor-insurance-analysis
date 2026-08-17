@@ -80,3 +80,25 @@ Models were trained on an 80/20 train/test split. Performance was evaluated acro
 | **Random Forest Classifier** | Default | 0.9903 | 0.8749 | 0.8742 | 0.9045 | 0.9491 |
 | **Logistic Regression** | Tuned (`C=0.0001`, `penalty='l1'`, `solver='saga'`) | 0.9619 | 0.0092 | 0.2243 | 0.0047 | 0.5020 |
 | **Random Forest Classifier** | Tuned (`n_estimators=178`, `max_depth=110`, `min_samples_split=5`, `min_samples_leaf=2`) | **0.9906** | **0.8801** | **0.8431** | **0.9206** | **0.9570** |
+
+
+**ROC Comparision**
+
+<img width="578" height="453" alt="ROC curve" src="https://github.com/user-attachments/assets/3d835145-41bf-47be-9988-5bfd241dbdbd" />
+
+>**Description:** OC curve plot illustrating true positive vs. false positive trade-offs. The Tuned Random Forest model curve hugs the upper-left boundary with an AUC of 0.9570, vastly outperforming Logistic Regression (AUC 0.5020).
+
+
+**Feature Importance & Selection (RFE)**
+
+<img width="405" height="278" alt="ElbowRFE" src="https://github.com/user-attachments/assets/641086bb-eeee-452e-8b97-9b0bf1845321" />
+
+> **Description:** Elbow plot generated via Recursive Feature Elimination (RFE) displaying accuracy progression against feature count. Demonstrates that top predictive power is achieved using an optimal subset of 3 features (```Freq```, ```VehGas```, ```VehPower```), beyond which performance gains plateau.
+
+## Key Findings & Business Recommendations
+
+* **Top Risk Indicators:** Engine power (```VehPower```), fuel type (```VehGas```), and historical policy claim frequency (```Freq```) represent the key predictors of claim occurrence.
+
+* **Geographical Pricing Strategy:** High-density and high-frequency regions such as *Champagne-Ardenne* and *Île-de-France* warrant localized risk-adjusted premium increases.
+
+* **Demographic Tailoring:** Young drivers (<25) and elderly drivers (>80) demonstrate statistically higher claim frequencies, supporting age-bracketed risk surcharges or telematics-based monitoring programs.
