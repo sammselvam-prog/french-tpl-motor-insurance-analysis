@@ -31,6 +31,6 @@ The project utilizes two core datasets merged on the policy identifier (Idpol):
 
 <img width="558" height="482" alt="CorrHeatmap" src="https://github.com/user-attachments/assets/4091d334-93b5-4f48-b93c-0ed42a0cb0c7" />
 
-
+> *Description:* Illustrates linear relationships between numerical parameters. Shows a weak positive correlation between ClaimNb and Exposure (0.069), and a strong inverse correlation between driver age (DrivAge) and BonusMalus (-0.480)
 
 
