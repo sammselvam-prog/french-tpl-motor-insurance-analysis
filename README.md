@@ -51,4 +51,32 @@ The project utilizes two core datasets merged on the policy identifier (Idpol):
 
 > **Description:** Scatter plot mapping average claim frequency against driver age. Highlights elevated frequencies among young drivers (~0.7 around age 20) and elderly drivers (~0.8 at age 95), while maintaining a stable lower baseline (0.2–0.3) for ages 30–80.
 
+**Tableau Visualization: Regional Claim Occurrence**
 
+<img width="1229" height="834" alt="Number of claims based on Regions" src="https://github.com/user-attachments/assets/b8f1a723-1929-4573-9337-b2af015f2dc7" />
+
+> **Description:** Geographic heatmap displaying regional claim density across France. The Centre region displays the highest concentration of total claims (highlighted in deep red), whereas regions like Corse and Bretagne show significantly lower counts.
+
+
+**Tableau Visualization: Bonus/Malus Distribution by Region**
+
+<img width="1418" height="787" alt="BonusMalus based on Regions" src="https://github.com/user-attachments/assets/4f86d5b8-4280-4118-8154-166fdad8e0f4" />
+
+> **Description:** Regional bar breakdown contrasting Bonus vs. Malus policyholder counts. Centre records the highest overall volume (1,675 Bonus and 154,654 Malus entries), illustrating that high-claim regions contain a elevated share of penalty-rated drivers.
+
+**Tableau Visualization: Average Claim Frequency by Region**
+
+<img width="1229" height="865" alt="Average Frequency on regions" src="https://github.com/user-attachments/assets/6d6073d9-4fd0-4222-a99d-8039aad8a441" />
+
+**Description:** Regional choropleth map shaded by claim frequency severity. Champagne-Ardenne records the highest average claim frequency (0.5813), followed by Franche-Comté (0.4406) and Île-de-France (0.4131), while Haute-Normandie registers the lowest.
+
+## Machine Learning Modeling & Evaluation
+
+Models were trained on an 80/20 train/test split. Performance was evaluated across baseline (default) setups and hyperparameter-tuned setups optimized using ```RandomizedSearchCV```.
+
+| Model | Setup | Accuracy | F1 Score | Precision | Recall | ROC AUC |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Logistic Regression** | Default | 0.9618 | 0.0193 | 0.2849 | 0.0100 | 0.5045 |
+| **Random Forest Classifier** | Default | 0.9903 | 0.8749 | 0.8742 | 0.9045 | 0.9491 |
+| **Logistic Regression** | Tuned (`C=0.0001`, `penalty='l1'`, `solver='saga'`) | 0.9619 | 0.0092 | 0.2243 | 0.0047 | 0.5020 |
+| **Random Forest Classifier** | Tuned (`n_estimators=178`, `max_depth=110`, `min_samples_split=5`, `min_samples_leaf=2`) | **0.9906** | **0.8801** | **0.8431** | **0.9206** | **0.9570** |
