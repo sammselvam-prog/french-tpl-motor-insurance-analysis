@@ -26,4 +26,11 @@ The project utilizes two core datasets merged on the policy identifier (Idpol):
 **Categorical Encoding**: Converted categorical variables (```VehBrand```, ```VehGas```, ```Area```, ```Region```) using ```LabelEncoder```.
 
 ##Visualizations & Exploratory Data Analysis
-**Cleaned Dataset Preview**
+
+**Correlation Heatmap**
+
+<img width="558" height="482" alt="CorrHeatmap" src="https://github.com/user-attachments/assets/4091d334-93b5-4f48-b93c-0ed42a0cb0c7" />
+
+
+
+
