@@ -102,3 +102,11 @@ Models were trained on an 80/20 train/test split. Performance was evaluated acro
 * **Geographical Pricing Strategy:** High-density and high-frequency regions such as *Champagne-Ardenne* and *Île-de-France* warrant localized risk-adjusted premium increases.
 
 * **Demographic Tailoring:** Young drivers (<25) and elderly drivers (>80) demonstrate statistically higher claim frequencies, supporting age-bracketed risk surcharges or telematics-based monitoring programs.
+
+## Built with
+
+Python(Jupyter), Tableau
+
+## Author
+
+Sam Rose M
