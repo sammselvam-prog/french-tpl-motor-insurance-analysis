@@ -110,3 +110,5 @@ Python(Jupyter), Tableau
 ### Author
 
 Sam Rose M
+
+Data Analyst
