@@ -103,10 +103,10 @@ Models were trained on an 80/20 train/test split. Performance was evaluated acro
 
 * **Demographic Tailoring:** Young drivers (<25) and elderly drivers (>80) demonstrate statistically higher claim frequencies, supporting age-bracketed risk surcharges or telematics-based monitoring programs.
 
-## Built with
+### Built with
 
 Python(Jupyter), Tableau
 
-## Author
+### Author
 
 Sam Rose M
