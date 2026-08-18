@@ -86,7 +86,7 @@ Models were trained on an 80/20 train/test split. Performance was evaluated acro
 
 <img width="578" height="453" alt="ROC curve" src="https://github.com/user-attachments/assets/3d835145-41bf-47be-9988-5bfd241dbdbd" />
 
->**Description:** OC curve plot illustrating true positive vs. false positive trade-offs. The Tuned Random Forest model curve hugs the upper-left boundary with an AUC of 0.9570, vastly outperforming Logistic Regression (AUC 0.5020).
+>**Description:** ROC curve plot illustrating true positive vs. false positive trade-offs. The Tuned Random Forest model curve hugs the upper-left boundary with an AUC of 0.9570, vastly outperforming Logistic Regression (AUC 0.5020).
 
 
 **Feature Importance & Selection (RFE)**
